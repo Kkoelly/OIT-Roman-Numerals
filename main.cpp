@@ -1,44 +1,33 @@
 #include <iostream>
 #include <map>
 #include <string>
+#include "numbers.h"
 
 using namespace std;
 
 int main() {
-    map<char, int> romanNums = {
-            {'I', 1},
-            {'V', 5},
-            {'X', 10},
-            {'L', 50},
-            {'C', 100},
-            {'D', 500},
-            {'M', 1000},
+    char option;
+    numbers num;
 
-    };
-    string input = "CDXXX";
-    int sum = 0;
-
-    for (int i = 0; i < input.length(); i++) {
-        if (i == input.length() - 1) {
-            sum += romanNums[input[i]];
-            break;
-        }
-        if (romanNums[input[i+1]] <= romanNums[input[i]]) {
-            sum += romanNums[input[i]];
-        }
-        else {
-            if (romanNums[input[i]] * 10 < romanNums[input[i+1]]) {
-                cout << "NOT VALID INPUT" << endl;
-                break;
-            }
-            else {
-                sum -= romanNums[input[i]];
-            }
-        }
+    do {
+        cout << "Choose (1) roman to decimal, or (2) decimal to roman: " << endl;
+        cin >> option;
     }
+    while(!(option == '1' || option == '2'));
 
-    cout << sum << endl;
-    
+    if (option == '1') {
+        string input;
+        cout << "Enter the number to convert: " << endl;
+        cin >> input;
+        cout << num.toDeci(input) << endl;
+    }
+    else if (option == '2') {
+        int input;
+        cout << "Enter the number to convert: " << endl;
+        cin >> input;
+        cout << num.toRoman(input) << endl;
+    }
 
     return 0;
 }
+
