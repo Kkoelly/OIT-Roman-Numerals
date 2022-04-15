@@ -1,0 +1,3 @@
+C:/Users/kelly/school/OIT-Roman-Numerals/cmake-build-debug/CMakeFiles/OIT_Roman_Numerals.dir
+C:/Users/kelly/school/OIT-Roman-Numerals/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/kelly/school/OIT-Roman-Numerals/cmake-build-debug/CMakeFiles/rebuild_cache.dir
