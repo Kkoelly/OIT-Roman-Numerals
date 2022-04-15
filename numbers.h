@@ -2,7 +2,7 @@
 
 #include <iostream>
 #include <string>
-#include <map>
+#include <unordered_map>
 #include <vector>
 using namespace std;
 class numbers {
@@ -54,7 +54,7 @@ public:
         return result;
     }
 private:
-    const map<char, int> romanNums = {
+    const unordered_map<char, int> romanNums = {
             {'I', 1},
             {'V', 5},
             {'X', 10},
